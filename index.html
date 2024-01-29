@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>GAME!!🕹️ - Bailey</title>
+  <link rel="icon" href="images/music.png">
+  <!-- Links our CSS code to our HTML code -->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Custom Overlay for game name and instructions -->
+  <div id="overlay" class="overlay">
+    <div class="overlay-content">
+      <h2>BAILEY SAYS!!!</h2>
+      <p>Welcome to my Light and Sound Memory Game! The victory you seek lies beyond this puzzle: Repeat the pattern you hear by pressing the buttons. Beware! It may or may not get tricky...</p>
+      <!--Start button for game is created-->
+      <button onclick="startGame()">Start</button>
+    </div>
+  </div>
+
+  <!-- Custom Overlay for game loss -->
+  <div id="overlay1" class="overlay1">
+    <div class="overlay1-content">
+      <h2>That was... interesting...</h2>
+      <p>Unfortunately, you did not reach victory, feel free to try again! (or not, your choice)</p>
+      <!--Start button for game is created-->
+      <button onclick="hideOverlay(1); startGame();">Try Again</button>
+      <a href="#" id="quitBtn" class="quit-button" onclick="quitGame()">Quit</a>
+    </div>
+  </div>
+
+  <!-- Custom Overlay for game win -->
+  <div id="overlay2" class="overlay2">
+    <div class="overlay2-content">
+      <h2>Congratulations, you are the victor!!</h2>
+      <p>You have earned the right to leave, play again, boast your accolade, or do anything else, good job!! <3</p>
+      <!--Start button for game is created-->
+      <button onclick="hideOverlay(2); startGame();">Let's Play Again!!</button>
+      <a href="#" id="quitBtn" class="quit-button" onclick="quitGame()">No Thanks.</a>
+    </div>
+  </div>
+
+  <!--Audio for loss-->
+  <audio id="myAudio">
+    <source src="entertainment/try.mp3" type="audio/mp3">
+  </audio>
+
+  <!--Audio for win-->
+  <audio id="myAudio1">
+    <source src="entertainment/win.mp3" type="audio/mp3">
+  </audio>
+
+  <!--Audio for start-->
+  <audio id="myAudio2">
+    <source src="entertainment/start.mp3" type="audio/mp3">
+  </audio>
+  
+  <!-- Element that displays the score -->
+  <div id="scoreDisplay">
+    <div class="scoreBox" id="currentScore">Score: 0</div>
+  </div>
+
+  <!-- Stop button for game is created -->
+  <button class="hidden" onclick="showOverlay(); stopGame();" id="stopBtn">Stop</button>
+
+  <div id="gameButtonArea">
+    <!-- Space where game buttons are added and defined -->
+    <button onmousedown="startTone(1)" onmouseup="stopTone()" onclick="guess(1)" id="Btn1"></button>
+    <button onmousedown="startTone(2)" onmouseup="stopTone()" onclick="guess(2)" id="Btn2"></button>
+    <button onmousedown="startTone(3)" onmouseup="stopTone()" onclick="guess(3)" id="Btn3"></button>
+    <button onmousedown="startTone(4)" onmouseup="stopTone()" onclick="guess(4)" id="Btn4"></button>
+  </div>
+
+  <!-- Links our JavaScript code to our HTML code -->
+  <script src="script.js"></script>
+</body>
+
+</html>

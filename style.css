@@ -1,0 +1,163 @@
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: #272727;
+  color: #EECDB4;
+}
+
+
+h1{
+  font-family: verdana, arial, sans-serif;
+  font-style: italic;
+}
+
+/*Style for buttons, game buttons and game button area*/
+button{
+  background-color: #EECDB4;
+  color: #272727;
+  font-family: verdana, arial, sans-serif;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+#Btn1{
+  background-color: lightgreen;
+}
+#Btn2{
+  background-color: lightblue;
+}
+#Btn3{
+  background-color: pink
+}
+#Btn4{
+  background-color: lightgoldenrodyellow
+}
+
+#Btn1:active, #Btn1.lit {
+    background:green;
+}
+
+#Btn2:active, #Btn2.lit {
+    background:blue;
+}
+
+#Btn3:active, #Btn3.lit {
+    background:red;
+}
+
+#Btn4:active, #Btn4.lit {
+    background:goldenrod;
+}
+
+#gameButtonArea > button {
+  width:200px;
+  height:200px;
+  margin:2px;
+}
+.hidden {
+  display: none;
+}
+
+/*Style for the Score Display */
+#scoreDisplay {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+}
+
+.scoreBox {
+  padding: 10px;
+  margin-right: 10px; 
+  background-color: #EECDB4; 
+  color: #272727;
+  border-radius: 10px;
+  text-align: center; 
+}
+
+#currentScore{
+  /* Adjust spacing between score sections */
+  margin-bottom: 5px; 
+}
+
+
+
+/*Style for game Start overlay*/
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay-content {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+/*Style for game loss overlay*/
+.overlay1 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f44336;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay1-content {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  border-radius: 10px;
+}
+
+.quit-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f44336; 
+  color: #fff; 
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quit-button:hover {
+  background-color: #d32f2f; 
+}
+
+/*Style for game win overlay*/
+.overlay2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #daffcc;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay2-content {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  border-radius: 10px;
+}
